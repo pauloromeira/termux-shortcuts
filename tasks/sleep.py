@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import requests
+
 from pychromecast import get_chromecasts
 from time import sleep
 
@@ -19,3 +21,5 @@ try:
         sleep(1)
 finally:
     cast.quit_app()
+
+requests.get('http://10.0.0.50/cm?cmnd=Power%20OFF')
